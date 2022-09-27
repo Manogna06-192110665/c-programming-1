@@ -1,27 +1,29 @@
-#include <stdio.h>
-int main() {
-   int year;
-   printf("Enter a year: ");
-   scanf("%d", &year);
-
-   // leap year if perfectly divisible by 400
-   if (year % 400 == 0) {
-      printf("%d is a leap year.", year);
-   }
-   // not a leap year if divisible by 100
-   // but not divisible by 400
-   else if (year % 100 == 0) {
-      printf("%d is not a leap year.", year);
-   }
-   // leap year if not divisible by 100
-   // but divisible by 4
-   else if (year % 4 == 0) {
-      printf("%d is a leap year.", year);
-   }
-   // all other years are not leap years
-   else {
-      printf("%d is not a leap year.", year);
-   }
-
-   return 0;
-}
+#include<stdio.h>
+int main()
+{
+	int d,m,i,j=1;
+	float y;
+	while(j==1)
+	{
+		printf("enter  date/month/year: ");
+		scanf("%d/%d/%f",&d,&m,&y);
+		i=y;
+		if(d>0 && m>0 && y>0 && i==y && d<32 && m<13)
+		{
+			if(i%4==0)
+			{
+				printf(" the given year is leap year");
+			}
+			else
+			{
+				printf(" the given year is not leap year");
+			}
+		}
+		else
+		{
+			printf("invalid");
+		}
+		printf("\n do you want to continue:(1/0):");
+		scanf("%d",&j);
+		}
+	}
